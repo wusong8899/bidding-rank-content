@@ -1,0 +1,31 @@
+{
+    "name": "wusong8899/bidding-rank-content",
+    "description": "A Flarum extension. Add bidding rank content to the forum",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "wusong8899\\biddingRank\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wusong8899"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "wusong8899 Bidding Rank Content",
+            "icon": {
+                "name": "fas fa-funnel-dollar",
+                "backgroundColor": "#68238c",
+                "color": "#fff"
+            }
+        }
+    }
+}

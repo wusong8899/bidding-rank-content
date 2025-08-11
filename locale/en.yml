@@ -1,0 +1,30 @@
+wusong8899-bidding-rank:
+  admin:
+    bidding-rank-list-username: Username
+    bidding-rank-list-content: Content
+    bidding-rank-list-url: URL
+    bidding-rank-list-title: Title
+    bidding-rank-list-bid: Bid
+    delete-confirmation: Delete Confirmation
+    delete: Delete
+    confirm: Confirm
+    cancel: Cancel
+  forum:
+    bidding-rank-list-username: User
+    bidding-rank-content: Bidding Rank
+    submit-content: Submit Content
+    edit-content: Edit Content
+    bidding-rank-details-title: Content Details
+    bidding-rank-list-content: Content
+    bidding-rank-list-bid: Bid
+    bidding-rank-list-bid-raise: Raise Bid
+    bidding-rank-list-title: Title
+    bidding-rank-list-url: URL
+    user-own-bid: "[Your Bid]"
+    insufficient-fund: Insufficient Func
+    add-error: Add Error
+    save-error: Save Error
+    submit-content-success: Success
+    edit-content-success: Success
+    list-empty: There is no content
+    ok: Ok

@@ -1,0 +1,29 @@
+wusong8899-bidding-rank:
+  admin:
+    bidding-rank-list-username: 用户
+    bidding-rank-list-content: 内容
+    bidding-rank-list-url: 网页地址
+    bidding-rank-list-title: 标题
+    bidding-rank-list-bid: 质押金额
+    delete-confirmation: 你确定要删除吗？
+    delete: 删除
+    confirm: 确定
+    cancel: 取消
+  forum:
+    bidding-rank-content: 质押娱乐场
+    submit-content: 提交内容
+    edit-content: 编辑/质押
+    bidding-rank-details-title: 内容详情
+    bidding-rank-list-content: 内容
+    bidding-rank-list-bid: 质押金额
+    bidding-rank-list-bid-raise: 加注金额
+    bidding-rank-list-url: 网页地址
+    bidding-rank-list-title: 标题
+    user-own-bid: "[你的投注]"
+    insufficient-fund: 资金不足
+    add-error: 发生错误
+    save-error: 保存错误
+    submit-content-success: 提交成功
+    edit-content-success: 编辑/质押成功
+    list-empty: 还没有人发布内容
+    ok: 确定
