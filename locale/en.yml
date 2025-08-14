@@ -9,6 +9,7 @@ wusong8899-bidding-rank:
     delete: Delete
     confirm: Confirm
     cancel: Cancel
+    list-load-more: Load More
   forum:
     bidding-rank-list-username: User
     bidding-rank-content: Bidding Rank

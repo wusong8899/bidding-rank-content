@@ -1,4 +1,3 @@
-import {extend, override} from 'flarum/extend';
 import SettingsPage from './components/SettingsPage';
 import BiddingRank from "../forum/model/BiddingRank";
 

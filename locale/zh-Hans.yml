@@ -9,6 +9,7 @@ wusong8899-bidding-rank:
     delete: 删除
     confirm: 确定
     cancel: 取消
+    list-load-more: 读取更多
   forum:
     bidding-rank-content: 质押娱乐场
     submit-content: 提交内容

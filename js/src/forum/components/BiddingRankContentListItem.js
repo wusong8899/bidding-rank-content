@@ -1,5 +1,4 @@
 import Component from "flarum/Component";
-import Link from "flarum/components/Link";
 import BiddingRankContentDetailsModal from './BiddingRankContentDetailsModal';
 import BiddingRankContentSubmitModal from './BiddingRankContentSubmitModal';
 
@@ -9,10 +8,10 @@ export default class BiddingRankContentListItem extends Component {
     const moneyName = app.forum.attribute('antoinefr-money.moneyname') || '[money]';
     const bidValue = biddingRankListItem.attribute("bid");
     const bidUser = biddingRankListItem.fromUser();
-    const bidURL = biddingRankListItem.url();
-    const bidContent = biddingRankListItem.content();
+    const _bidURL = biddingRankListItem.url();
+    const _bidContent = biddingRankListItem.content();
     const bidTitle = biddingRankListItem.title();
-    const bidText = moneyName.replace('[money]', bidValue);
+    const _bidText = moneyName.replace('[money]', bidValue);
 
     let userBidText = "";
 

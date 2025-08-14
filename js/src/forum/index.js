@@ -1,6 +1,5 @@
 import app from 'flarum/forum/app';
 import { extend,override } from 'flarum/extend';
-import addSidebarMenu from './addSidebarMenu';
 import BiddingRankContentIndexPage from './components/BiddingRankContentIndexPage';
 import BiddingRank from "./model/BiddingRank";
 import LoadingIndicator from "flarum/components/LoadingIndicator";
@@ -30,7 +29,7 @@ app.initializers.add('wusong8899-client1-bidding-rank-content', () => {
   app.store.models.biddingRankList = BiddingRank;
 
   let _this = TagsPage.prototype;
-  extend(TagsPage.prototype, 'oninit', function (vnode) {
+  extend(TagsPage.prototype, 'oninit', function () {
 
     _this.biddingRankLoading = true;
     _this.moreResults = false;
@@ -86,7 +85,7 @@ app.initializers.add('wusong8899-client1-bidding-rank-content', () => {
     _this.loadResults(_this.biddingRankList.length);
   }
 
-  override(TagsPage.prototype, 'view', function (vnode) {
+  override(TagsPage.prototype, 'view', function () {
     let rankID = 0;
     let biddingRankLoading;
 
@@ -115,14 +114,12 @@ app.initializers.add('wusong8899-client1-bidding-rank-content', () => {
                 const lastPostedDiscussion = tag.lastPostedDiscussion();
                 const children = sortTags(tag.children() || []);
 
-                let wusong8899BackgroundURL = tag.attribute("wusong8899BackgroundURL");
-                let tagBackgroundImageStyle = wusong8899BackgroundURL?"background:url("+wusong8899BackgroundURL+");background-size: cover;background-position: center;background-repeat: no-repeat;":"--tag-bg: "+tag.color();
 
                 return (
-                  <li className={classList('TagTile', { colored: tag.color() }, textContrastClass(tag.color()))} style={tagBackgroundImageStyle}>
+                  <li className={classList('TagTile', { colored: tag.color() }, textContrastClass(tag.color()))}>
                     <Link className="TagTile-info" href={app.route.tag(tag)}>
                       {tag.icon() && tagIcon(tag, {}, { useColor: false })}
-                      <h3 className="TagTile-name">{ wusong8899BackgroundURL?"":tag.name()}</h3>
+                      <h3 className="TagTile-name">{tag.name()}</h3>
                       <p className="TagTile-description">{tag.description()}</p>
                       {children ? (
                         <div className="TagTile-children">

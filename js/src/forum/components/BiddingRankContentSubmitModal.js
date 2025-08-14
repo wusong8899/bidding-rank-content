@@ -121,12 +121,12 @@ export default class BiddingRankContentSubmitModal extends Modal {
         title:this.bidTitle()
       })
       .then(
-        (response) => {
+        () => {
           this.loading = false;
           app.modal.show(BiddingRankContentEditSuccessModal);
         }
       )
-      .catch((e) => {
+      .catch(() => {
         this.loading = false;
       });
     }else{
@@ -146,7 +146,7 @@ export default class BiddingRankContentSubmitModal extends Modal {
           app.modal.show(BiddingRankContentSubmitSuccessModal);
         }
       )
-      .catch((e) => {
+      .catch(() => {
         this.loading = false;
       });
     }

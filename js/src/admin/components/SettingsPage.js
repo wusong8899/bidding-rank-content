@@ -2,9 +2,10 @@ import ExtensionPage from 'flarum/components/ExtensionPage';
 import LoadingIndicator from 'flarum/components/LoadingIndicator';
 import Button from 'flarum/components/Button';
 import BiddingRankListItem from './BiddingRankListItem';
+import app from 'flarum/admin/app';
 
 
-export default class DecorationStoreSettings extends ExtensionPage {
+export default class BiddingRankSettings extends ExtensionPage {
   oninit(attrs) {
     super.oninit(attrs);
     this.loading = true;
@@ -36,14 +37,14 @@ export default class DecorationStoreSettings extends ExtensionPage {
 
           {!this.loading && this.biddingRankList.length===0 && (
             <div>
-              <div style="font-size:1.4em;color: var(--muted-more-color);text-align: center;line-height: 100px;">{app.translator.trans("wusong8899-decoration-store.lib.list-empty")}</div>
+              <div style="font-size:1.4em;color: var(--muted-more-color);text-align: center;line-height: 100px;">{app.translator.trans("wusong8899-bidding-rank.forum.list-empty")}</div>
             </div>
           )}
 
           {!loading && this.hasMoreResults() && (
             <div style="text-align:center;padding:20px">
               <Button className={'Button Button--primary'} disabled={this.loading} loading={this.loading} onclick={() => this.loadMore()}>
-                {app.translator.trans('wusong8899-decoration-store.lib.list-load-more')}
+                {app.translator.trans('wusong8899-bidding-rank.admin.list-load-more')}
               </Button>
             </div>
           )}

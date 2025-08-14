@@ -1,7 +1,7 @@
 import Modal from 'flarum/components/Modal';
 import Button from 'flarum/components/Button';
 
-export default class DecorationStoreDeleteModal extends Modal {
+export default class BiddingRankDeleteModal extends Modal {
   static isDismissibleViaBackdropClick = false;
   static isDismissibleViaCloseButton = true;
 
@@ -30,7 +30,7 @@ export default class DecorationStoreDeleteModal extends Modal {
               type: 'submit',
               loading: this.loading,
             },
-            app.translator.trans('wusong8899-decoration-store.lib.confirm')
+            app.translator.trans('wusong8899-bidding-rank.admin.confirm')
           )}&nbsp;
           {Button.component(
             {
@@ -40,7 +40,7 @@ export default class DecorationStoreDeleteModal extends Modal {
                 this.hide();
               }
             },
-            app.translator.trans('wusong8899-decoration-store.lib.cancel')
+            app.translator.trans('wusong8899-bidding-rank.admin.cancel')
           )}
         </div>
       </div>
@@ -55,8 +55,8 @@ export default class DecorationStoreDeleteModal extends Modal {
       isDelete:1,
     })
     .then(
-      () => location.reload(),
-      (response) => {
+      () => {
+        location.reload()
         this.loading = false;
       }
     );

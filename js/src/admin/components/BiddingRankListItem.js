@@ -3,17 +3,14 @@ import Button from 'flarum/components/Button';
 import BiddingRankDeleteModal from './BiddingRankDeleteModal';
 import username from "flarum/helpers/username";
 
-export default class DecorationStoreListItem extends Component {
+export default class BiddingRankListItem extends Component {
 
   view() {
-    const {biddingRankListItem,rankID} = this.attrs;
-    const moneyName = app.forum.attribute('antoinefr-money.moneyname') || '[money]';
+    const {biddingRankListItem,_rankID} = this.attrs;
     const bidValue = biddingRankListItem.attribute("bid");
     const bidUser = biddingRankListItem.fromUser();
-    const bidURL = biddingRankListItem.url();
     const bidContent = biddingRankListItem.content();
     const bidTitle = biddingRankListItem.title();
-    const bidText = moneyName.replace('[money]', bidValue);
 
     return (
       <div className="biddingRankSettingContainer">
@@ -21,7 +18,7 @@ export default class DecorationStoreListItem extends Component {
           {Button.component({
             style: "font-weight:bold;",
             className: 'Button Button--danger',
-            onclick: (e) => {
+            onclick: () => {
               this.deleteItem(biddingRankListItem)
             }
           },

@@ -25,20 +25,15 @@ export default class BiddingRankContentDetailsModal extends Modal {
     const bidUser = this.biddingRankListItem.fromUser();
     const bidURL = this.biddingRankListItem.url();
     const bidContent = this.biddingRankListItem.content();
-    const bidText = moneyName.replace('[money]', bidValue);
+    const _bidText = moneyName.replace('[money]', bidValue);
 
-    let avatarWithFrame,usernameWithColor;
-    if('wusong8899-decoration-store' in flarum.extensions){
-      const { components } = require('@wusong8899-decoration-store');
-      avatarWithFrame = components.avatarWithFrame;
-      usernameWithColor = components.usernameWithColor;
-    }
-
+    // Use standard Flarum helpers as fallbacks for decoration-store components
+    const userAvatar = avatar(bidUser);
 
     return (
       <div className="Modal-body">
         <div style="min-height: 50px;" onclick={() => this.openURL(bidURL) }>
-          <div style="float:left">{avatarWithFrame?avatarWithFrame(bidUser):avatar(bidUser)}</div>
+          <div style="float:left">{userAvatar}</div>
           <div style="padding-left: 70px;">
             <div>{bidContent}</div>
             <div style="padding-top: 10px;">{bidURL}</div>
